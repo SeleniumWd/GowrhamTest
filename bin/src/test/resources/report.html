@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agent/Employee Integration Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    h1 { margin-bottom: 12px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+    th { background: #f5f5f5; position: sticky; top: 0; }
+    tbody tr:nth-child(even) { background: #fafafa; }
+  </style>
+</head>
+<body>
+  <h1>Agent/Employee Integration Report</h1>
+  <table id="reportTable">
+    <thead>
+      <tr><th>UserID</th><th>Name</th><th>Email</th><th>Role</th><th>CreatedDate</th><th>Status</th><th>Department</th><th>Manager</th><th>JoiningDate</th><th>Salary</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>U001</td><td>User1 Test</td><td>user1@example.com</td><td>Admin</td><td>2024-01-13</td><td>Inactive</td><td>Support</td><td>Anna Brown</td><td>2024-01-15</td><td>48434</td></tr>
+<tr><td>U002</td><td>User2 Test</td><td>user2@example.com</td><td>Admin</td><td>2024-10-29</td><td>Inactive</td><td>Sales</td><td>John Smith</td><td>2024-10-30</td><td>63657</td></tr>
+<tr><td>U003</td><td>User3 Test</td><td>user3@example.com</td><td>Agent</td><td>2024-09-15</td><td>Active</td><td>HR</td><td>Anna Brown</td><td>2024-09-25</td><td>106426</td></tr>
+<tr><td>U004</td><td>User4 Test</td><td>user4@example.com</td><td>Staff</td><td>2024-04-22</td><td>Inactive</td><td>HR</td><td>Liam White</td><td>2024-04-22</td><td>55926</td></tr>
+<tr><td>U005</td><td>User5 Test</td><td>user5@example.com</td><td>Staff</td><td>2024-06-23</td><td>Inactive</td><td>Support</td><td>Anna Brown</td><td>2024-06-28</td><td>48396</td></tr>
+<tr><td>U006</td><td>User6 Test</td><td>user6@example.com</td><td>Admin</td><td>2024-07-13</td><td>Active</td><td>Operations</td><td>Liam White</td><td>2024-07-22</td><td>69671</td></tr>
+<tr><td>U007</td><td>User7 Test</td><td>user7@example.com</td><td>Admin</td><td>2024-08-23</td><td>Active</td><td>IT</td><td>John Smith</td><td>2024-08-31</td><td>73427</td></tr>
+<tr><td>U008</td><td>User8 Test</td><td>user8@example.com</td><td>Manager</td><td>2024-10-22</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-10-22</td><td>64871</td></tr>
+<tr><td>U009</td><td>User9 Test</td><td>user9@example.com</td><td>Manager</td><td>2024-02-10</td><td>Active</td><td>Sales</td><td>Noah Patel</td><td>2024-02-14</td><td>94429</td></tr>
+<tr><td>U010</td><td>User10 Test</td><td>user10@example.com</td><td>Manager</td><td>2024-03-24</td><td>Inactive</td><td>Operations</td><td>Anna Brown</td><td>2024-04-03</td><td>69993</td></tr>
+<tr><td>U011</td><td>User11 Test</td><td>user11@example.com</td><td>Admin</td><td>2024-11-07</td><td>Active</td><td>HR</td><td>Aarav Kumar</td><td>2024-11-10</td><td>56417</td></tr>
+<tr><td>U012</td><td>User12 Test</td><td>user12@example.com</td><td>Staff</td><td>2024-07-13</td><td>Inactive</td><td>Finance</td><td>Aarav Kumar</td><td>2024-07-21</td><td>63785</td></tr>
+<tr><td>U013</td><td>User13 Test</td><td>user13@example.com</td><td>Manager</td><td>2024-01-29</td><td>Active</td><td>Sales</td><td>Liam White</td><td>2024-02-04</td><td>70093</td></tr>
+<tr><td>U014</td><td>User14 Test</td><td>user14@example.com</td><td>Admin</td><td>2024-04-18</td><td>Inactive</td><td>Support</td><td>Aarav Kumar</td><td>2024-04-25</td><td>86856</td></tr>
+<tr><td>U015</td><td>User15 Test</td><td>user15@example.com</td><td>Staff</td><td>2024-03-14</td><td>Inactive</td><td>Support</td><td>Anna Brown</td><td>2024-03-22</td><td>105644</td></tr>
+<tr><td>U016</td><td>User16 Test</td><td>user16@example.com</td><td>Manager</td><td>2024-10-26</td><td>Inactive</td><td>HR</td><td>Noah Patel</td><td>2024-10-31</td><td>63746</td></tr>
+<tr><td>U017</td><td>User17 Test</td><td>user17@example.com</td><td>Agent</td><td>2024-09-17</td><td>Inactive</td><td>Sales</td><td>John Smith</td><td>2024-09-18</td><td>55033</td></tr>
+<tr><td>U018</td><td>User18 Test</td><td>user18@example.com</td><td>Agent</td><td>2024-12-14</td><td>Inactive</td><td>HR</td><td>John Smith</td><td>2024-12-20</td><td>85019</td></tr>
+<tr><td>U019</td><td>User19 Test</td><td>user19@example.com</td><td>Staff</td><td>2024-09-27</td><td>Inactive</td><td>HR</td><td>John Smith</td><td>2024-10-07</td><td>50014</td></tr>
+<tr><td>U020</td><td>User20 Test</td><td>user20@example.com</td><td>Manager</td><td>2024-11-24</td><td>Inactive</td><td>Sales</td><td>Liam White</td><td>2024-11-30</td><td>55730</td></tr>
+<tr><td>U021</td><td>User21 Test</td><td>user21@example.com</td><td>Staff</td><td>2024-01-02</td><td>Inactive</td><td>HR</td><td>Anna Brown</td><td>2024-01-10</td><td>48947</td></tr>
+<tr><td>U022</td><td>User22 Test</td><td>user22@example.com</td><td>Manager</td><td>2024-11-23</td><td>Active</td><td>Support</td><td>Liam White</td><td>2024-11-25</td><td>105697</td></tr>
+<tr><td>U023</td><td>User23 Test</td><td>user23@example.com</td><td>Admin</td><td>2024-11-02</td><td>Inactive</td><td>IT</td><td>John Smith</td><td>2024-11-03</td><td>82576</td></tr>
+<tr><td>U024</td><td>User24 Test</td><td>user24@example.com</td><td>Manager</td><td>2024-05-02</td><td>Active</td><td>Support</td><td>Mia Chen</td><td>2024-05-03</td><td>46226</td></tr>
+<tr><td>U025</td><td>User25 Test</td><td>user25@example.com</td><td>Staff</td><td>2024-02-05</td><td>Active</td><td>Support</td><td>Aarav Kumar</td><td>2024-02-12</td><td>107063</td></tr>
+<tr><td>U026</td><td>User26 Test</td><td>user26@example.com</td><td>Agent</td><td>2024-05-15</td><td>Inactive</td><td>Support</td><td>Mia Chen</td><td>2024-05-18</td><td>75857</td></tr>
+<tr><td>U027</td><td>User27 Test</td><td>user27@example.com</td><td>Staff</td><td>2024-12-09</td><td>Inactive</td><td>IT</td><td>Mia Chen</td><td>2024-12-16</td><td>50860</td></tr>
+<tr><td>U028</td><td>User28 Test</td><td>user28@example.com</td><td>Agent</td><td>2024-04-25</td><td>Active</td><td>Operations</td><td>John Smith</td><td>2024-05-04</td><td>107603</td></tr>
+<tr><td>U029</td><td>User29 Test</td><td>user29@example.com</td><td>Agent</td><td>2024-10-28</td><td>Active</td><td>Sales</td><td>John Smith</td><td>2024-11-07</td><td>42716</td></tr>
+<tr><td>U030</td><td>User30 Test</td><td>user30@example.com</td><td>Agent</td><td>2024-02-04</td><td>Active</td><td>Operations</td><td>John Smith</td><td>2024-02-12</td><td>66195</td></tr>
+<tr><td>U031</td><td>User31 Test</td><td>user31@example.com</td><td>Manager</td><td>2024-12-08</td><td>Inactive</td><td>Support</td><td>Mia Chen</td><td>2024-12-10</td><td>109847</td></tr>
+<tr><td>U032</td><td>User32 Test</td><td>user32@example.com</td><td>Staff</td><td>2024-05-04</td><td>Inactive</td><td>IT</td><td>Anna Brown</td><td>2024-05-05</td><td>47704</td></tr>
+<tr><td>U033</td><td>User33 Test</td><td>user33@example.com</td><td>Staff</td><td>2024-06-30</td><td>Inactive</td><td>IT</td><td>Noah Patel</td><td>2024-06-30</td><td>119696</td></tr>
+<tr><td>U034</td><td>User34 Test</td><td>user34@example.com</td><td>Admin</td><td>2024-02-01</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-02-02</td><td>67591</td></tr>
+<tr><td>U035</td><td>User35 Test</td><td>user35@example.com</td><td>Agent</td><td>2024-04-07</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-04-09</td><td>71509</td></tr>
+<tr><td>U036</td><td>User36 Test</td><td>user36@example.com</td><td>Staff</td><td>2024-05-07</td><td>Active</td><td>IT</td><td>Mia Chen</td><td>2024-05-08</td><td>41630</td></tr>
+<tr><td>U037</td><td>User37 Test</td><td>user37@example.com</td><td>Admin</td><td>2024-02-17</td><td>Active</td><td>Support</td><td>Noah Patel</td><td>2024-02-24</td><td>98092</td></tr>
+<tr><td>U038</td><td>User38 Test</td><td>user38@example.com</td><td>Agent</td><td>2024-07-24</td><td>Active</td><td>Support</td><td>Noah Patel</td><td>2024-07-24</td><td>86173</td></tr>
+<tr><td>U039</td><td>User39 Test</td><td>user39@example.com</td><td>Manager</td><td>2024-08-20</td><td>Inactive</td><td>IT</td><td>Aarav Kumar</td><td>2024-08-28</td><td>98788</td></tr>
+<tr><td>U040</td><td>User40 Test</td><td>user40@example.com</td><td>Agent</td><td>2024-04-07</td><td>Inactive</td><td>Support</td><td>John Smith</td><td>2024-04-16</td><td>106066</td></tr>
+<tr><td>U041</td><td>User41 Test</td><td>user41@example.com</td><td>Admin</td><td>2024-06-09</td><td>Active</td><td>Sales</td><td>Mia Chen</td><td>2024-06-16</td><td>100909</td></tr>
+<tr><td>U042</td><td>User42 Test</td><td>user42@example.com</td><td>Agent</td><td>2024-01-30</td><td>Active</td><td>Support</td><td>John Smith</td><td>2024-02-08</td><td>43907</td></tr>
+<tr><td>U043</td><td>User43 Test</td><td>user43@example.com</td><td>Agent</td><td>2024-07-25</td><td>Active</td><td>HR</td><td>Anna Brown</td><td>2024-08-03</td><td>112924</td></tr>
+<tr><td>U044</td><td>User44 Test</td><td>user44@example.com</td><td>Admin</td><td>2024-11-13</td><td>Active</td><td>IT</td><td>Aarav Kumar</td><td>2024-11-22</td><td>109085</td></tr>
+<tr><td>U045</td><td>User45 Test</td><td>user45@example.com</td><td>Manager</td><td>2024-05-13</td><td>Active</td><td>Finance</td><td>Aarav Kumar</td><td>2024-05-18</td><td>66285</td></tr>
+<tr><td>U046</td><td>User46 Test</td><td>user46@example.com</td><td>Manager</td><td>2024-07-21</td><td>Active</td><td>Finance</td><td>Aarav Kumar</td><td>2024-07-25</td><td>94929</td></tr>
+<tr><td>U047</td><td>User47 Test</td><td>user47@example.com</td><td>Manager</td><td>2024-02-07</td><td>Active</td><td>IT</td><td>Mia Chen</td><td>2024-02-16</td><td>48104</td></tr>
+<tr><td>U048</td><td>User48 Test</td><td>user48@example.com</td><td>Admin</td><td>2024-10-02</td><td>Active</td><td>HR</td><td>Liam White</td><td>2024-10-04</td><td>80745</td></tr>
+<tr><td>U049</td><td>User49 Test</td><td>user49@example.com</td><td>Admin</td><td>2024-05-05</td><td>Inactive</td><td>Operations</td><td>Anna Brown</td><td>2024-05-12</td><td>106200</td></tr>
+<tr><td>U050</td><td>User50 Test</td><td>user50@example.com</td><td>Manager</td><td>2024-11-09</td><td>Active</td><td>Finance</td><td>Mia Chen</td><td>2024-11-13</td><td>48577</td></tr>
+<tr><td>U051</td><td>User51 Test</td><td>user51@example.com</td><td>Agent</td><td>2024-05-15</td><td>Active</td><td>Sales</td><td>Aarav Kumar</td><td>2024-05-23</td><td>55374</td></tr>
+<tr><td>U052</td><td>User52 Test</td><td>user52@example.com</td><td>Manager</td><td>2024-05-24</td><td>Active</td><td>Finance</td><td>Liam White</td><td>2024-05-27</td><td>118130</td></tr>
+<tr><td>U053</td><td>User53 Test</td><td>user53@example.com</td><td>Manager</td><td>2024-09-15</td><td>Inactive</td><td>Operations</td><td>John Smith</td><td>2024-09-16</td><td>118136</td></tr>
+<tr><td>U054</td><td>User54 Test</td><td>user54@example.com</td><td>Staff</td><td>2024-05-21</td><td>Active</td><td>Sales</td><td>Liam White</td><td>2024-05-23</td><td>118507</td></tr>
+<tr><td>U055</td><td>User55 Test</td><td>user55@example.com</td><td>Manager</td><td>2024-03-23</td><td>Inactive</td><td>HR</td><td>Aarav Kumar</td><td>2024-03-29</td><td>108519</td></tr>
+<tr><td>U056</td><td>User56 Test</td><td>user56@example.com</td><td>Admin</td><td>2024-02-27</td><td>Active</td><td>Finance</td><td>Anna Brown</td><td>2024-03-06</td><td>39722</td></tr>
+<tr><td>U057</td><td>User57 Test</td><td>user57@example.com</td><td>Manager</td><td>2024-10-25</td><td>Active</td><td>IT</td><td>Anna Brown</td><td>2024-10-25</td><td>75404</td></tr>
+<tr><td>U058</td><td>User58 Test</td><td>user58@example.com</td><td>Manager</td><td>2024-01-21</td><td>Inactive</td><td>Support</td><td>Aarav Kumar</td><td>2024-01-24</td><td>48473</td></tr>
+<tr><td>U059</td><td>User59 Test</td><td>user59@example.com</td><td>Manager</td><td>2024-10-13</td><td>Inactive</td><td>HR</td><td>Aarav Kumar</td><td>2024-10-15</td><td>66029</td></tr>
+<tr><td>U060</td><td>User60 Test</td><td>user60@example.com</td><td>Agent</td><td>2024-03-31</td><td>Inactive</td><td>Sales</td><td>Anna Brown</td><td>2024-04-05</td><td>88964</td></tr>
+<tr><td>U061</td><td>User61 Test</td><td>user61@example.com</td><td>Agent</td><td>2024-05-16</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-05-22</td><td>40075</td></tr>
+<tr><td>U062</td><td>User62 Test</td><td>user62@example.com</td><td>Staff</td><td>2024-04-23</td><td>Active</td><td>IT</td><td>Liam White</td><td>2024-04-27</td><td>64831</td></tr>
+<tr><td>U063</td><td>User63 Test</td><td>user63@example.com</td><td>Agent</td><td>2024-01-13</td><td>Active</td><td>IT</td><td>Liam White</td><td>2024-01-17</td><td>44099</td></tr>
+<tr><td>U064</td><td>User64 Test</td><td>user64@example.com</td><td>Manager</td><td>2024-06-28</td><td>Inactive</td><td>Finance</td><td>Mia Chen</td><td>2024-07-03</td><td>38617</td></tr>
+<tr><td>U065</td><td>User65 Test</td><td>user65@example.com</td><td>Admin</td><td>2024-05-13</td><td>Active</td><td>HR</td><td>Liam White</td><td>2024-05-13</td><td>49208</td></tr>
+<tr><td>U066</td><td>User66 Test</td><td>user66@example.com</td><td>Staff</td><td>2024-06-25</td><td>Inactive</td><td>IT</td><td>Mia Chen</td><td>2024-07-03</td><td>50157</td></tr>
+<tr><td>U067</td><td>User67 Test</td><td>user67@example.com</td><td>Staff</td><td>2024-10-22</td><td>Active</td><td>Operations</td><td>John Smith</td><td>2024-10-28</td><td>35221</td></tr>
+<tr><td>U068</td><td>User68 Test</td><td>user68@example.com</td><td>Agent</td><td>2024-07-05</td><td>Inactive</td><td>Sales</td><td>Aarav Kumar</td><td>2024-07-10</td><td>116678</td></tr>
+<tr><td>U069</td><td>User69 Test</td><td>user69@example.com</td><td>Manager</td><td>2024-12-05</td><td>Active</td><td>Finance</td><td>Liam White</td><td>2024-12-13</td><td>75538</td></tr>
+<tr><td>U070</td><td>User70 Test</td><td>user70@example.com</td><td>Staff</td><td>2024-06-16</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-06-24</td><td>51683</td></tr>
+<tr><td>U071</td><td>User71 Test</td><td>user71@example.com</td><td>Agent</td><td>2024-08-03</td><td>Inactive</td><td>Finance</td><td>Aarav Kumar</td><td>2024-08-05</td><td>115676</td></tr>
+<tr><td>U072</td><td>User72 Test</td><td>user72@example.com</td><td>Manager</td><td>2024-07-26</td><td>Active</td><td>Operations</td><td>Liam White</td><td>2024-07-29</td><td>91346</td></tr>
+<tr><td>U073</td><td>User73 Test</td><td>user73@example.com</td><td>Manager</td><td>2024-08-26</td><td>Inactive</td><td>IT</td><td>Aarav Kumar</td><td>2024-08-29</td><td>102000</td></tr>
+<tr><td>U074</td><td>User74 Test</td><td>user74@example.com</td><td>Staff</td><td>2024-03-27</td><td>Active</td><td>Operations</td><td>Mia Chen</td><td>2024-04-06</td><td>117960</td></tr>
+<tr><td>U075</td><td>User75 Test</td><td>user75@example.com</td><td>Manager</td><td>2024-02-17</td><td>Active</td><td>Finance</td><td>Liam White</td><td>2024-02-20</td><td>61100</td></tr>
+<tr><td>U076</td><td>User76 Test</td><td>user76@example.com</td><td>Agent</td><td>2024-01-13</td><td>Active</td><td>Support</td><td>Noah Patel</td><td>2024-01-22</td><td>44545</td></tr>
+<tr><td>U077</td><td>User77 Test</td><td>user77@example.com</td><td>Staff</td><td>2024-07-31</td><td>Active</td><td>Finance</td><td>Aarav Kumar</td><td>2024-08-06</td><td>99799</td></tr>
+<tr><td>U078</td><td>User78 Test</td><td>user78@example.com</td><td>Staff</td><td>2024-05-04</td><td>Active</td><td>Finance</td><td>Aarav Kumar</td><td>2024-05-04</td><td>48970</td></tr>
+<tr><td>U079</td><td>User79 Test</td><td>user79@example.com</td><td>Staff</td><td>2024-04-22</td><td>Active</td><td>Finance</td><td>Mia Chen</td><td>2024-04-29</td><td>41582</td></tr>
+<tr><td>U080</td><td>User80 Test</td><td>user80@example.com</td><td>Agent</td><td>2024-03-03</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-03-13</td><td>104616</td></tr>
+<tr><td>U081</td><td>User81 Test</td><td>user81@example.com</td><td>Manager</td><td>2024-08-14</td><td>Inactive</td><td>HR</td><td>Noah Patel</td><td>2024-08-16</td><td>97216</td></tr>
+<tr><td>U082</td><td>User82 Test</td><td>user82@example.com</td><td>Staff</td><td>2024-05-12</td><td>Active</td><td>Finance</td><td>Liam White</td><td>2024-05-20</td><td>98517</td></tr>
+<tr><td>U083</td><td>User83 Test</td><td>user83@example.com</td><td>Agent</td><td>2024-05-20</td><td>Inactive</td><td>Sales</td><td>Aarav Kumar</td><td>2024-05-24</td><td>65735</td></tr>
+<tr><td>U084</td><td>User84 Test</td><td>user84@example.com</td><td>Manager</td><td>2024-06-20</td><td>Inactive</td><td>HR</td><td>John Smith</td><td>2024-06-22</td><td>54769</td></tr>
+<tr><td>U085</td><td>User85 Test</td><td>user85@example.com</td><td>Agent</td><td>2024-07-15</td><td>Active</td><td>Finance</td><td>Anna Brown</td><td>2024-07-16</td><td>89377</td></tr>
+<tr><td>U086</td><td>User86 Test</td><td>user86@example.com</td><td>Staff</td><td>2024-06-18</td><td>Inactive</td><td>IT</td><td>John Smith</td><td>2024-06-21</td><td>90069</td></tr>
+<tr><td>U087</td><td>User87 Test</td><td>user87@example.com</td><td>Staff</td><td>2024-10-26</td><td>Active</td><td>HR</td><td>Noah Patel</td><td>2024-11-02</td><td>35772</td></tr>
+<tr><td>U088</td><td>User88 Test</td><td>user88@example.com</td><td>Manager</td><td>2024-06-01</td><td>Inactive</td><td>IT</td><td>Mia Chen</td><td>2024-06-09</td><td>114069</td></tr>
+<tr><td>U089</td><td>User89 Test</td><td>user89@example.com</td><td>Agent</td><td>2024-09-06</td><td>Active</td><td>Operations</td><td>Noah Patel</td><td>2024-09-13</td><td>38804</td></tr>
+<tr><td>U090</td><td>User90 Test</td><td>user90@example.com</td><td>Staff</td><td>2024-06-21</td><td>Inactive</td><td>Finance</td><td>Anna Brown</td><td>2024-06-28</td><td>51728</td></tr>
+<tr><td>U091</td><td>User91 Test</td><td>user91@example.com</td><td>Admin</td><td>2024-07-20</td><td>Active</td><td>Sales</td><td>Aarav Kumar</td><td>2024-07-26</td><td>52786</td></tr>
+<tr><td>U092</td><td>User92 Test</td><td>user92@example.com</td><td>Staff</td><td>2024-04-03</td><td>Active</td><td>Operations</td><td>Noah Patel</td><td>2024-04-08</td><td>62742</td></tr>
+<tr><td>U093</td><td>User93 Test</td><td>user93@example.com</td><td>Staff</td><td>2024-06-16</td><td>Inactive</td><td>IT</td><td>Liam White</td><td>2024-06-22</td><td>68065</td></tr>
+<tr><td>U094</td><td>User94 Test</td><td>user94@example.com</td><td>Admin</td><td>2024-08-28</td><td>Active</td><td>Finance</td><td>Mia Chen</td><td>2024-08-28</td><td>80870</td></tr>
+<tr><td>U095</td><td>User95 Test</td><td>user95@example.com</td><td>Agent</td><td>2024-11-28</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-11-28</td><td>67411</td></tr>
+<tr><td>U096</td><td>User96 Test</td><td>user96@example.com</td><td>Agent</td><td>2024-01-11</td><td>Active</td><td>Support</td><td>Anna Brown</td><td>2024-01-18</td><td>49993</td></tr>
+<tr><td>U097</td><td>User97 Test</td><td>user97@example.com</td><td>Agent</td><td>2024-08-26</td><td>Inactive</td><td>Operations</td><td>Anna Brown</td><td>2024-09-04</td><td>114593</td></tr>
+<tr><td>U098</td><td>User98 Test</td><td>user98@example.com</td><td>Admin</td><td>2024-03-24</td><td>Inactive</td><td>Sales</td><td>Mia Chen</td><td>2024-03-24</td><td>75888</td></tr>
+<tr><td>U099</td><td>User99 Test</td><td>user99@example.com</td><td>Staff</td><td>2024-07-22</td><td>Active</td><td>Sales</td><td>Mia Chen</td><td>2024-08-01</td><td>66830</td></tr>
+<tr><td>U100</td><td>User100 Test</td><td>user100@example.com</td><td>Admin</td><td>2024-12-22</td><td>Inactive</td><td>Finance</td><td>Mia Chen</td><td>2024-12-23</td><td>109177</td></tr>
+<tr><td>U101</td><td>User101 Test</td><td>user101@example.com</td><td>Admin</td><td>2024-06-26</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-06-27</td><td>101317</td></tr>
+<tr><td>U102</td><td>User102 Test</td><td>user102@example.com</td><td>Manager</td><td>2024-01-07</td><td>Inactive</td><td>IT</td><td>John Smith</td><td>2024-01-13</td><td>82472</td></tr>
+<tr><td>U103</td><td>User103 Test</td><td>user103@example.com</td><td>Staff</td><td>2024-12-28</td><td>Active</td><td>IT</td><td>Anna Brown</td><td>2025-01-05</td><td>70400</td></tr>
+<tr><td>U104</td><td>User104 Test</td><td>user104@example.com</td><td>Staff</td><td>2024-08-26</td><td>Inactive</td><td>Finance</td><td>Mia Chen</td><td>2024-08-30</td><td>77245</td></tr>
+<tr><td>U105</td><td>User105 Test</td><td>user105@example.com</td><td>Agent</td><td>2024-02-14</td><td>Inactive</td><td>IT</td><td>Anna Brown</td><td>2024-02-21</td><td>109691</td></tr>
+<tr><td>U106</td><td>User106 Test</td><td>user106@example.com</td><td>Staff</td><td>2024-06-21</td><td>Active</td><td>IT</td><td>Liam White</td><td>2024-06-23</td><td>98904</td></tr>
+<tr><td>U107</td><td>User107 Test</td><td>user107@example.com</td><td>Agent</td><td>2024-06-30</td><td>Inactive</td><td>Operations</td><td>Liam White</td><td>2024-07-09</td><td>71211</td></tr>
+<tr><td>U108</td><td>User108 Test</td><td>user108@example.com</td><td>Admin</td><td>2024-09-21</td><td>Active</td><td>Sales</td><td>Anna Brown</td><td>2024-09-27</td><td>99038</td></tr>
+<tr><td>U109</td><td>User109 Test</td><td>user109@example.com</td><td>Agent</td><td>2024-12-19</td><td>Inactive</td><td>Finance</td><td>Aarav Kumar</td><td>2024-12-26</td><td>93743</td></tr>
+<tr><td>U110</td><td>User110 Test</td><td>user110@example.com</td><td>Admin</td><td>2024-02-17</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-02-20</td><td>75135</td></tr>
+<tr><td>U111</td><td>User111 Test</td><td>user111@example.com</td><td>Manager</td><td>2024-08-30</td><td>Inactive</td><td>IT</td><td>Aarav Kumar</td><td>2024-09-07</td><td>78357</td></tr>
+<tr><td>U112</td><td>User112 Test</td><td>user112@example.com</td><td>Manager</td><td>2024-12-25</td><td>Inactive</td><td>Operations</td><td>Liam White</td><td>2024-12-29</td><td>65217</td></tr>
+<tr><td>U113</td><td>User113 Test</td><td>user113@example.com</td><td>Admin</td><td>2024-04-08</td><td>Inactive</td><td>Sales</td><td>Aarav Kumar</td><td>2024-04-16</td><td>59267</td></tr>
+<tr><td>U114</td><td>User114 Test</td><td>user114@example.com</td><td>Agent</td><td>2024-04-20</td><td>Inactive</td><td>Operations</td><td>Aarav Kumar</td><td>2024-04-29</td><td>103765</td></tr>
+<tr><td>U115</td><td>User115 Test</td><td>user115@example.com</td><td>Manager</td><td>2024-02-21</td><td>Active</td><td>Operations</td><td>Anna Brown</td><td>2024-02-26</td><td>58519</td></tr>
+<tr><td>U116</td><td>User116 Test</td><td>user116@example.com</td><td>Manager</td><td>2024-01-08</td><td>Active</td><td>Operations</td><td>John Smith</td><td>2024-01-08</td><td>107529</td></tr>
+<tr><td>U117</td><td>User117 Test</td><td>user117@example.com</td><td>Manager</td><td>2024-12-23</td><td>Active</td><td>Finance</td><td>Noah Patel</td><td>2024-12-24</td><td>36607</td></tr>
+<tr><td>U118</td><td>User118 Test</td><td>user118@example.com</td><td>Manager</td><td>2024-08-28</td><td>Inactive</td><td>IT</td><td>Liam White</td><td>2024-08-30</td><td>41734</td></tr>
+<tr><td>U119</td><td>User119 Test</td><td>user119@example.com</td><td>Manager</td><td>2024-09-01</td><td>Active</td><td>Sales</td><td>Noah Patel</td><td>2024-09-08</td><td>44710</td></tr>
+<tr><td>U120</td><td>User120 Test</td><td>user120@example.com</td><td>Admin</td><td>2024-03-18</td><td>Active</td><td>HR</td><td>Liam White</td><td>2024-03-19</td><td>67530</td></tr>
+<tr><td>U121</td><td>User121 Test</td><td>user121@example.com</td><td>Admin</td><td>2024-10-12</td><td>Inactive</td><td>HR</td><td>Mia Chen</td><td>2024-10-21</td><td>64581</td></tr>
+<tr><td>U122</td><td>User122 Test</td><td>user122@example.com</td><td>Staff</td><td>2024-08-18</td><td>Inactive</td><td>Operations</td><td>Mia Chen</td><td>2024-08-24</td><td>75026</td></tr>
+<tr><td>U123</td><td>User123 Test</td><td>user123@example.com</td><td>Admin</td><td>2024-11-08</td><td>Active</td><td>Support</td><td>Aarav Kumar</td><td>2024-11-11</td><td>69687</td></tr>
+<tr><td>U124</td><td>User124 Test</td><td>user124@example.com</td><td>Admin</td><td>2024-03-21</td><td>Active</td><td>Support</td><td>Mia Chen</td><td>2024-03-22</td><td>55517</td></tr>
+<tr><td>U125</td><td>User125 Test</td><td>user125@example.com</td><td>Admin</td><td>2024-07-28</td><td>Inactive</td><td>Finance</td><td>Mia Chen</td><td>2024-08-04</td><td>73175</td></tr>
+<tr><td>U126</td><td>User126 Test</td><td>user126@example.com</td><td>Admin</td><td>2024-04-28</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-05-05</td><td>44329</td></tr>
+<tr><td>U127</td><td>User127 Test</td><td>user127@example.com</td><td>Agent</td><td>2024-05-15</td><td>Active</td><td>IT</td><td>John Smith</td><td>2024-05-23</td><td>64466</td></tr>
+<tr><td>U128</td><td>User128 Test</td><td>user128@example.com</td><td>Agent</td><td>2024-05-16</td><td>Active</td><td>Sales</td><td>John Smith</td><td>2024-05-18</td><td>75319</td></tr>
+<tr><td>U129</td><td>User129 Test</td><td>user129@example.com</td><td>Manager</td><td>2024-08-12</td><td>Active</td><td>IT</td><td>Aarav Kumar</td><td>2024-08-16</td><td>87757</td></tr>
+<tr><td>U130</td><td>User130 Test</td><td>user130@example.com</td><td>Manager</td><td>2024-09-13</td><td>Inactive</td><td>IT</td><td>John Smith</td><td>2024-09-22</td><td>40224</td></tr>
+<tr><td>U131</td><td>User131 Test</td><td>user131@example.com</td><td>Staff</td><td>2024-06-14</td><td>Inactive</td><td>Sales</td><td>John Smith</td><td>2024-06-17</td><td>110392</td></tr>
+<tr><td>U132</td><td>User132 Test</td><td>user132@example.com</td><td>Admin</td><td>2024-12-10</td><td>Inactive</td><td>HR</td><td>John Smith</td><td>2024-12-12</td><td>96669</td></tr>
+<tr><td>U133</td><td>User133 Test</td><td>user133@example.com</td><td>Staff</td><td>2024-05-22</td><td>Active</td><td>HR</td><td>Noah Patel</td><td>2024-06-01</td><td>99451</td></tr>
+<tr><td>U134</td><td>User134 Test</td><td>user134@example.com</td><td>Admin</td><td>2024-08-28</td><td>Inactive</td><td>IT</td><td>Liam White</td><td>2024-09-02</td><td>48710</td></tr>
+<tr><td>U135</td><td>User135 Test</td><td>user135@example.com</td><td>Agent</td><td>2024-06-17</td><td>Inactive</td><td>Finance</td><td>Noah Patel</td><td>2024-06-21</td><td>87488</td></tr>
+<tr><td>U136</td><td>User136 Test</td><td>user136@example.com</td><td>Admin</td><td>2024-08-20</td><td>Active</td><td>Operations</td><td>Liam White</td><td>2024-08-25</td><td>50194</td></tr>
+<tr><td>U137</td><td>User137 Test</td><td>user137@example.com</td><td>Staff</td><td>2024-09-20</td><td>Active</td><td>Finance</td><td>Mia Chen</td><td>2024-09-27</td><td>89165</td></tr>
+<tr><td>U138</td><td>User138 Test</td><td>user138@example.com</td><td>Admin</td><td>2024-04-06</td><td>Inactive</td><td>HR</td><td>Noah Patel</td><td>2024-04-16</td><td>92939</td></tr>
+<tr><td>U139</td><td>User139 Test</td><td>user139@example.com</td><td>Admin</td><td>2024-04-14</td><td>Inactive</td><td>HR</td><td>Anna Brown</td><td>2024-04-18</td><td>92424</td></tr>
+<tr><td>U140</td><td>User140 Test</td><td>user140@example.com</td><td>Staff</td><td>2024-03-03</td><td>Active</td><td>Finance</td><td>Mia Chen</td><td>2024-03-06</td><td>55758</td></tr>
+<tr><td>U141</td><td>User141 Test</td><td>user141@example.com</td><td>Manager</td><td>2024-10-09</td><td>Active</td><td>HR</td><td>Noah Patel</td><td>2024-10-10</td><td>64451</td></tr>
+<tr><td>U142</td><td>User142 Test</td><td>user142@example.com</td><td>Admin</td><td>2024-08-24</td><td>Active</td><td>Finance</td><td>Anna Brown</td><td>2024-08-31</td><td>73254</td></tr>
+<tr><td>U143</td><td>User143 Test</td><td>user143@example.com</td><td>Manager</td><td>2024-07-31</td><td>Inactive</td><td>IT</td><td>Anna Brown</td><td>2024-08-07</td><td>107255</td></tr>
+<tr><td>U144</td><td>User144 Test</td><td>user144@example.com</td><td>Agent</td><td>2024-07-15</td><td>Active</td><td>HR</td><td>Mia Chen</td><td>2024-07-17</td><td>44150</td></tr>
+<tr><td>U145</td><td>User145 Test</td><td>user145@example.com</td><td>Manager</td><td>2024-07-31</td><td>Inactive</td><td>HR</td><td>Liam White</td><td>2024-07-31</td><td>72072</td></tr>
+<tr><td>U146</td><td>User146 Test</td><td>user146@example.com</td><td>Manager</td><td>2024-10-27</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-11-04</td><td>98483</td></tr>
+<tr><td>U147</td><td>User147 Test</td><td>user147@example.com</td><td>Manager</td><td>2024-06-19</td><td>Inactive</td><td>IT</td><td>Liam White</td><td>2024-06-22</td><td>66300</td></tr>
+<tr><td>U148</td><td>User148 Test</td><td>user148@example.com</td><td>Staff</td><td>2024-04-29</td><td>Inactive</td><td>Sales</td><td>Liam White</td><td>2024-05-06</td><td>84968</td></tr>
+<tr><td>U149</td><td>User149 Test</td><td>user149@example.com</td><td>Staff</td><td>2024-12-05</td><td>Active</td><td>IT</td><td>John Smith</td><td>2024-12-07</td><td>100836</td></tr>
+<tr><td>U150</td><td>User150 Test</td><td>user150@example.com</td><td>Manager</td><td>2024-02-21</td><td>Inactive</td><td>Sales</td><td>Mia Chen</td><td>2024-02-28</td><td>37011</td></tr>
+<tr><td>U151</td><td>User151 Test</td><td>user151@example.com</td><td>Agent</td><td>2024-07-28</td><td>Active</td><td>Sales</td><td>Noah Patel</td><td>2024-08-01</td><td>79375</td></tr>
+<tr><td>U152</td><td>User152 Test</td><td>user152@example.com</td><td>Staff</td><td>2024-11-28</td><td>Active</td><td>Operations</td><td>Aarav Kumar</td><td>2024-12-06</td><td>84808</td></tr>
+<tr><td>U153</td><td>User153 Test</td><td>user153@example.com</td><td>Manager</td><td>2024-11-16</td><td>Inactive</td><td>HR</td><td>John Smith</td><td>2024-11-25</td><td>43968</td></tr>
+<tr><td>U154</td><td>User154 Test</td><td>user154@example.com</td><td>Agent</td><td>2024-11-19</td><td>Inactive</td><td>Support</td><td>Aarav Kumar</td><td>2024-11-20</td><td>91881</td></tr>
+<tr><td>U155</td><td>User155 Test</td><td>user155@example.com</td><td>Admin</td><td>2024-11-20</td><td>Active</td><td>IT</td><td>Anna Brown</td><td>2024-11-24</td><td>38794</td></tr>
+<tr><td>U156</td><td>User156 Test</td><td>user156@example.com</td><td>Admin</td><td>2024-06-15</td><td>Active</td><td>Operations</td><td>Liam White</td><td>2024-06-20</td><td>91450</td></tr>
+<tr><td>U157</td><td>User157 Test</td><td>user157@example.com</td><td>Agent</td><td>2024-05-05</td><td>Inactive</td><td>HR</td><td>Aarav Kumar</td><td>2024-05-07</td><td>57280</td></tr>
+<tr><td>U158</td><td>User158 Test</td><td>user158@example.com</td><td>Agent</td><td>2024-02-10</td><td>Inactive</td><td>HR</td><td>Aarav Kumar</td><td>2024-02-13</td><td>100230</td></tr>
+<tr><td>U159</td><td>User159 Test</td><td>user159@example.com</td><td>Agent</td><td>2024-04-28</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-05-05</td><td>68466</td></tr>
+<tr><td>U160</td><td>User160 Test</td><td>user160@example.com</td><td>Admin</td><td>2024-08-26</td><td>Inactive</td><td>Finance</td><td>Mia Chen</td><td>2024-08-28</td><td>44681</td></tr>
+<tr><td>U161</td><td>User161 Test</td><td>user161@example.com</td><td>Staff</td><td>2024-06-25</td><td>Inactive</td><td>Finance</td><td>Noah Patel</td><td>2024-06-29</td><td>94878</td></tr>
+<tr><td>U162</td><td>User162 Test</td><td>user162@example.com</td><td>Manager</td><td>2024-04-11</td><td>Inactive</td><td>IT</td><td>John Smith</td><td>2024-04-14</td><td>84986</td></tr>
+<tr><td>U163</td><td>User163 Test</td><td>user163@example.com</td><td>Manager</td><td>2024-10-21</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-10-21</td><td>86879</td></tr>
+<tr><td>U164</td><td>User164 Test</td><td>user164@example.com</td><td>Manager</td><td>2024-01-05</td><td>Active</td><td>HR</td><td>Aarav Kumar</td><td>2024-01-12</td><td>72512</td></tr>
+<tr><td>U165</td><td>User165 Test</td><td>user165@example.com</td><td>Agent</td><td>2024-11-06</td><td>Inactive</td><td>Support</td><td>Aarav Kumar</td><td>2024-11-09</td><td>116381</td></tr>
+<tr><td>U166</td><td>User166 Test</td><td>user166@example.com</td><td>Manager</td><td>2024-12-13</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-12-23</td><td>119717</td></tr>
+<tr><td>U167</td><td>User167 Test</td><td>user167@example.com</td><td>Admin</td><td>2024-06-07</td><td>Inactive</td><td>Sales</td><td>Mia Chen</td><td>2024-06-12</td><td>52224</td></tr>
+<tr><td>U168</td><td>User168 Test</td><td>user168@example.com</td><td>Admin</td><td>2024-05-31</td><td>Inactive</td><td>Finance</td><td>Noah Patel</td><td>2024-06-02</td><td>61318</td></tr>
+<tr><td>U169</td><td>User169 Test</td><td>user169@example.com</td><td>Agent</td><td>2024-10-03</td><td>Inactive</td><td>HR</td><td>Mia Chen</td><td>2024-10-07</td><td>56567</td></tr>
+<tr><td>U170</td><td>User170 Test</td><td>user170@example.com</td><td>Manager</td><td>2024-09-03</td><td>Inactive</td><td>Finance</td><td>Liam White</td><td>2024-09-04</td><td>96385</td></tr>
+<tr><td>U171</td><td>User171 Test</td><td>user171@example.com</td><td>Admin</td><td>2024-03-13</td><td>Active</td><td>Finance</td><td>Aarav Kumar</td><td>2024-03-23</td><td>87089</td></tr>
+<tr><td>U172</td><td>User172 Test</td><td>user172@example.com</td><td>Manager</td><td>2024-02-16</td><td>Inactive</td><td>Sales</td><td>Liam White</td><td>2024-02-24</td><td>51199</td></tr>
+<tr><td>U173</td><td>User173 Test</td><td>user173@example.com</td><td>Staff</td><td>2024-07-07</td><td>Inactive</td><td>HR</td><td>Noah Patel</td><td>2024-07-17</td><td>83689</td></tr>
+<tr><td>U174</td><td>User174 Test</td><td>user174@example.com</td><td>Admin</td><td>2024-12-11</td><td>Active</td><td>IT</td><td>John Smith</td><td>2024-12-20</td><td>108584</td></tr>
+<tr><td>U175</td><td>User175 Test</td><td>user175@example.com</td><td>Manager</td><td>2024-11-08</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-11-18</td><td>95852</td></tr>
+<tr><td>U176</td><td>User176 Test</td><td>user176@example.com</td><td>Manager</td><td>2024-11-28</td><td>Inactive</td><td>Sales</td><td>Anna Brown</td><td>2024-11-28</td><td>39877</td></tr>
+<tr><td>U177</td><td>User177 Test</td><td>user177@example.com</td><td>Manager</td><td>2024-09-09</td><td>Active</td><td>Sales</td><td>Anna Brown</td><td>2024-09-17</td><td>52781</td></tr>
+<tr><td>U178</td><td>User178 Test</td><td>user178@example.com</td><td>Staff</td><td>2024-08-20</td><td>Inactive</td><td>Finance</td><td>Aarav Kumar</td><td>2024-08-28</td><td>89935</td></tr>
+<tr><td>U179</td><td>User179 Test</td><td>user179@example.com</td><td>Agent</td><td>2024-07-31</td><td>Active</td><td>IT</td><td>Mia Chen</td><td>2024-08-06</td><td>71666</td></tr>
+<tr><td>U180</td><td>User180 Test</td><td>user180@example.com</td><td>Admin</td><td>2024-12-19</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-12-26</td><td>65947</td></tr>
+<tr><td>U181</td><td>User181 Test</td><td>user181@example.com</td><td>Manager</td><td>2024-02-20</td><td>Inactive</td><td>HR</td><td>Aarav Kumar</td><td>2024-02-25</td><td>42936</td></tr>
+<tr><td>U182</td><td>User182 Test</td><td>user182@example.com</td><td>Staff</td><td>2024-05-21</td><td>Active</td><td>Sales</td><td>Noah Patel</td><td>2024-05-22</td><td>62801</td></tr>
+<tr><td>U183</td><td>User183 Test</td><td>user183@example.com</td><td>Admin</td><td>2024-01-26</td><td>Inactive</td><td>Support</td><td>Anna Brown</td><td>2024-02-04</td><td>61896</td></tr>
+<tr><td>U184</td><td>User184 Test</td><td>user184@example.com</td><td>Admin</td><td>2024-10-10</td><td>Active</td><td>HR</td><td>Anna Brown</td><td>2024-10-13</td><td>78064</td></tr>
+<tr><td>U185</td><td>User185 Test</td><td>user185@example.com</td><td>Agent</td><td>2024-11-01</td><td>Active</td><td>Operations</td><td>Anna Brown</td><td>2024-11-03</td><td>105807</td></tr>
+<tr><td>U186</td><td>User186 Test</td><td>user186@example.com</td><td>Manager</td><td>2024-03-30</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-04-01</td><td>36947</td></tr>
+<tr><td>U187</td><td>User187 Test</td><td>user187@example.com</td><td>Manager</td><td>2024-05-01</td><td>Inactive</td><td>Sales</td><td>Anna Brown</td><td>2024-05-05</td><td>41868</td></tr>
+<tr><td>U188</td><td>User188 Test</td><td>user188@example.com</td><td>Agent</td><td>2024-08-03</td><td>Active</td><td>Finance</td><td>John Smith</td><td>2024-08-10</td><td>93756</td></tr>
+<tr><td>U189</td><td>User189 Test</td><td>user189@example.com</td><td>Manager</td><td>2024-09-19</td><td>Active</td><td>IT</td><td>Mia Chen</td><td>2024-09-22</td><td>115623</td></tr>
+<tr><td>U190</td><td>User190 Test</td><td>user190@example.com</td><td>Admin</td><td>2024-12-03</td><td>Inactive</td><td>IT</td><td>Aarav Kumar</td><td>2024-12-03</td><td>42972</td></tr>
+<tr><td>U191</td><td>User191 Test</td><td>user191@example.com</td><td>Staff</td><td>2024-07-24</td><td>Inactive</td><td>Finance</td><td>John Smith</td><td>2024-07-31</td><td>93138</td></tr>
+<tr><td>U192</td><td>User192 Test</td><td>user192@example.com</td><td>Admin</td><td>2024-02-11</td><td>Inactive</td><td>HR</td><td>Anna Brown</td><td>2024-02-12</td><td>51540</td></tr>
+<tr><td>U193</td><td>User193 Test</td><td>user193@example.com</td><td>Manager</td><td>2024-11-15</td><td>Inactive</td><td>IT</td><td>Mia Chen</td><td>2024-11-23</td><td>73652</td></tr>
+<tr><td>U194</td><td>User194 Test</td><td>user194@example.com</td><td>Staff</td><td>2024-09-15</td><td>Inactive</td><td>Sales</td><td>Aarav Kumar</td><td>2024-09-16</td><td>107264</td></tr>
+<tr><td>U195</td><td>User195 Test</td><td>user195@example.com</td><td>Agent</td><td>2024-08-08</td><td>Inactive</td><td>Support</td><td>Noah Patel</td><td>2024-08-13</td><td>94441</td></tr>
+<tr><td>U196</td><td>User196 Test</td><td>user196@example.com</td><td>Staff</td><td>2024-07-31</td><td>Active</td><td>Operations</td><td>Noah Patel</td><td>2024-08-05</td><td>68408</td></tr>
+<tr><td>U197</td><td>User197 Test</td><td>user197@example.com</td><td>Manager</td><td>2024-03-19</td><td>Inactive</td><td>Sales</td><td>John Smith</td><td>2024-03-20</td><td>47219</td></tr>
+<tr><td>U198</td><td>User198 Test</td><td>user198@example.com</td><td>Staff</td><td>2024-02-19</td><td>Inactive</td><td>Support</td><td>Mia Chen</td><td>2024-02-19</td><td>111869</td></tr>
+<tr><td>U199</td><td>User199 Test</td><td>user199@example.com</td><td>Manager</td><td>2024-12-09</td><td>Active</td><td>IT</td><td>Liam White</td><td>2024-12-19</td><td>90435</td></tr>
+<tr><td>U200</td><td>User200 Test</td><td>user200@example.com</td><td>Admin</td><td>2024-05-27</td><td>Inactive</td><td>Operations</td><td>John Smith</td><td>2024-06-05</td><td>101507</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
